@@ -6,25 +6,24 @@
     'use strict';
 
     /* ----------------------------------------------------------
-       1. Lucide icons (init when CDN script is ready)
+       1. Lucide icons
        ---------------------------------------------------------- */
     function initIcons() {
         if (window.lucide && typeof window.lucide.createIcons === 'function') {
             window.lucide.createIcons();
         } else {
-            // Retry briefly until the CDN script is loaded
             setTimeout(initIcons, 80);
         }
     }
     initIcons();
 
     /* ----------------------------------------------------------
-       2. Navbar — change style on scroll
+       2. Navbar — compact style on scroll
        ---------------------------------------------------------- */
     const navbar = document.getElementById('navbar');
     function onScroll() {
         if (!navbar) return;
-        if (window.scrollY > 60) {
+        if (window.scrollY > 40) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
@@ -40,20 +39,20 @@
     const navLinks  = document.getElementById('navLinks');
 
     if (navToggle && navLinks) {
-        navToggle.addEventListener('click', function () {
-            navLinks.classList.toggle('is-open');
-            const isOpen = navLinks.classList.contains('is-open');
+        navToggle.addEventListener('click', function (e) {
+            e.stopPropagation();
+            const isOpen = navLinks.classList.toggle('is-open');
+            navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
             navToggle.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
         });
 
-        // Close drawer on link click (mobile)
         navLinks.querySelectorAll('a').forEach(function (link) {
             link.addEventListener('click', function () {
                 navLinks.classList.remove('is-open');
+                navToggle.setAttribute('aria-expanded', 'false');
             });
         });
 
-        // Close drawer when clicking outside
         document.addEventListener('click', function (e) {
             if (
                 navLinks.classList.contains('is-open') &&
@@ -61,18 +60,19 @@
                 !navToggle.contains(e.target)
             ) {
                 navLinks.classList.remove('is-open');
+                navToggle.setAttribute('aria-expanded', 'false');
             }
         });
     }
 
     /* ----------------------------------------------------------
-       4. Active link highlighting on scroll
+       4. Active link highlight on scroll
        ---------------------------------------------------------- */
-    const sections     = document.querySelectorAll('section[id]');
-    const navAnchors   = document.querySelectorAll('.nav-links a');
+    const sections   = document.querySelectorAll('section[id], .reviews-section[id]');
+    const navAnchors = document.querySelectorAll('.nav-links a');
 
     function setActiveLink() {
-        const y = window.scrollY + 140;
+        const y = window.scrollY + 160;
         let currentId = '';
         sections.forEach(function (sec) {
             if (y >= sec.offsetTop && y < sec.offsetTop + sec.offsetHeight) {
@@ -91,16 +91,14 @@
     window.addEventListener('scroll', setActiveLink, { passive: true });
 
     /* ----------------------------------------------------------
-       5. Reveal-on-scroll animations
+       5. Reveal-on-scroll
        ---------------------------------------------------------- */
     const revealEls = document.querySelectorAll('.reveal');
-
     if ('IntersectionObserver' in window) {
         const io = new IntersectionObserver(function (entries) {
             entries.forEach(function (entry, i) {
                 if (entry.isIntersecting) {
-                    // Slight stagger when several siblings reveal together
-                    const delay = (i % 4) * 80;
+                    const delay = (i % 4) * 90;
                     setTimeout(function () {
                         entry.target.classList.add('is-visible');
                     }, delay);
@@ -108,13 +106,11 @@
                 }
             });
         }, {
-            threshold: 0.12,
-            rootMargin: '0px 0px -40px 0px'
+            threshold: 0.10,
+            rootMargin: '0px 0px -50px 0px'
         });
-
         revealEls.forEach(function (el) { io.observe(el); });
     } else {
-        // Fallback: show everything
         revealEls.forEach(function (el) { el.classList.add('is-visible'); });
     }
 
@@ -136,8 +132,7 @@
     });
 
     /* ----------------------------------------------------------
-       7. Image graceful fallback (in case background images fail)
-       Uses a tinted gradient so the layout never breaks visually.
+       7. Background image graceful fallback
        ---------------------------------------------------------- */
     const imageNodes = document.querySelectorAll(
         '.hero-bg, .double-card-img, .dish-img, .apt-img, .gallery-item'
@@ -146,7 +141,8 @@
         const cs = window.getComputedStyle(node);
         const bg = cs.backgroundImage;
         if (!bg || bg === 'none') {
-            node.style.background = 'linear-gradient(135deg, #1B4D4A 0%, #0F3331 100%)';
+            node.style.background =
+                'linear-gradient(135deg, #1B4D4A 0%, #0F3331 60%, #B8924A 200%)';
         }
     });
 
