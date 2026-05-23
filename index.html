@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Le Paradisier — Restaurant raffiné et appartements meublés au cœur de la ville. Cuisine moderne, séjours confortables et service attentionné." />
+    <title>Le Paradisier — Restaurant & Appartements Meublés</title>
+
+    <!-- Google Fonts: Cormorant Garamond (serif) + Inter (sans-serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <!-- ============================ HEADER / NAVBAR ============================ -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a href="#accueil" class="brand">
+                <span class="brand-name">LE PARADISIER</span>
+                <span class="brand-sub">Restaurant &amp; Appartements</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#accueil">Accueil</a>
+                <a href="#restaurant">Restaurant</a>
+                <a href="#appartements">Appartements</a>
+                <a href="#offres">Offres &amp; Séjours</a>
+                <a href="#apropos">À propos</a>
+                <a href="#avis">Avis</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-outline">Réserver une table</a>
+                <a href="https://wa.me/261340000000" target="_blank" rel="noopener" class="btn btn-primary btn-wa">
+                    <i data-lucide="message-circle"></i>
+                    WhatsApp
+                </a>
+                <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================ HERO ============================ -->
+    <section class="hero" id="accueil">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+
+        <div class="container hero-content reveal">
+            <span class="eyebrow">Restaurant &amp; Appartements meublés</span>
+            <h1 class="hero-title">
+                Le plaisir de bien manger,<br />
+                <em>le confort d'un chez-soi.</em>
+            </h1>
+            <p class="hero-text">
+                Restaurant raffiné &amp; appartements meublés au cœur de la ville,
+                pour des séjours inoubliables.
+            </p>
+            <div class="hero-actions">
+                <a href="#restaurant" class="btn btn-primary btn-lg">Découvrir le restaurant</a>
+                <a href="#appartements" class="btn btn-ghost btn-lg">Voir les appartements</a>
+            </div>
+        </div>
+
+        <a href="#double" class="hero-scroll" aria-label="Faire défiler">
+            <span></span>
+        </a>
+    </section>
+
+    <!-- ============================ DOUBLE OFFRE ============================ -->
+    <section class="section double-offer" id="double">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">Notre univers</span>
+                <h2 class="section-title">Deux expériences, un même art de recevoir</h2>
+            </div>
+
+            <div class="double-grid">
+                <article class="double-card reveal">
+                    <div class="double-card-img double-card-img-1"></div>
+                    <div class="double-card-body">
+                        <span class="card-tag">01 — Gastronomie</span>
+                        <h3>Le Restaurant</h3>
+                        <p>
+                            Une cuisine moderne, élaborée avec des produits frais,
+                            dans une ambiance élégante et chaleureuse.
+                        </p>
+                        <a href="#restaurant" class="link-arrow">
+                            Explorer la carte <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="double-card reveal">
+                    <div class="double-card-img double-card-img-2"></div>
+                    <div class="double-card-body">
+                        <span class="card-tag">02 — Hébergement</span>
+                        <h3>Les Appartements</h3>
+                        <p>
+                            Des appartements meublés avec goût, tout équipés pour votre
+                            confort, que vous soyez en voyage d'affaires ou en séjour détente.
+                        </p>
+                        <a href="#appartements" class="link-arrow">
+                            Voir les appartements <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ RESTAURANT ============================ -->
+    <section class="section section-cream" id="restaurant">
+        <div class="container">
+            <div class="section-header center reveal">
+                <span class="eyebrow">Le Restaurant</span>
+                <h2 class="section-title">Saveurs du moment</h2>
+                <p class="section-sub">
+                    Une sélection de plats signature, préparés chaque jour avec
+                    passion par notre chef.
+                </p>
+            </div>
+
+            <div class="dishes-grid">
+                <article class="dish-card reveal">
+                    <div class="dish-img dish-img-1"></div>
+                    <div class="dish-body">
+                        <h4>Magret de canard rôti</h4>
+                        <p>Sauce miel-romarin, légumes glacés du marché.</p>
+                        <span class="dish-price">24 €</span>
+                    </div>
+                </article>
+
+                <article class="dish-card reveal">
+                    <div class="dish-img dish-img-2"></div>
+                    <div class="dish-body">
+                        <h4>Saint-Jacques snackées</h4>
+                        <p>Crème de panais, huile de noisette, fleur de sel.</p>
+                        <span class="dish-price">26 €</span>
+                    </div>
+                </article>
+
+                <article class="dish-card reveal">
+                    <div class="dish-img dish-img-3"></div>
+                    <div class="dish-body">
+                        <h4>Pavé de bar sauvage</h4>
+                        <p>Risotto crémeux au citron confit et asperges vertes.</p>
+                        <span class="dish-price">23 €</span>
+                    </div>
+                </article>
+
+                <article class="dish-card reveal">
+                    <div class="dish-img dish-img-4"></div>
+                    <div class="dish-body">
+                        <h4>Tarte fine aux pommes</h4>
+                        <p>Caramel beurre salé et glace vanille de Madagascar.</p>
+                        <span class="dish-price">9 €</span>
+                    </div>
+                </article>
+            </div>
+
+            <div class="section-footer reveal">
+                <a href="#contact" class="link-arrow link-gold">
+                    Voir la carte complète <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ APPARTEMENTS ============================ -->
+    <section class="section" id="appartements">
+        <div class="container">
+            <div class="section-header center reveal">
+                <span class="eyebrow">Hébergement</span>
+                <h2 class="section-title">Nos appartements</h2>
+                <p class="section-sub">
+                    Trois espaces uniques, pensés pour vos courts ou longs séjours,
+                    en couple, entre amis ou en famille.
+                </p>
+            </div>
+
+            <div class="apt-grid">
+                <article class="apt-card reveal">
+                    <div class="apt-img apt-img-1">
+                        <span class="apt-price">À partir de 75 € / nuit</span>
+                    </div>
+                    <div class="apt-body">
+                        <h3>Studio Deluxe</h3>
+                        <ul class="apt-features">
+                            <li><i data-lucide="users"></i> 2 personnes</li>
+                            <li><i data-lucide="ruler"></i> 35 m²</li>
+                            <li><i data-lucide="wifi"></i> Wi-Fi</li>
+                            <li><i data-lucide="utensils"></i> Cuisine équipée</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline btn-block">Réserver</a>
+                    </div>
+                </article>
+
+                <article class="apt-card apt-card-featured reveal">
+                    <span class="apt-badge">Favori</span>
+                    <div class="apt-img apt-img-2">
+                        <span class="apt-price">À partir de 110 € / nuit</span>
+                    </div>
+                    <div class="apt-body">
+                        <h3>Appartement Confort</h3>
+                        <ul class="apt-features">
+                            <li><i data-lucide="users"></i> 2 à 4 personnes</li>
+                            <li><i data-lucide="ruler"></i> 55 m²</li>
+                            <li><i data-lucide="wifi"></i> Wi-Fi</li>
+                            <li><i data-lucide="utensils"></i> Cuisine équipée</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary btn-block">Réserver</a>
+                    </div>
+                </article>
+
+                <article class="apt-card reveal">
+                    <div class="apt-img apt-img-3">
+                        <span class="apt-price">À partir de 150 € / nuit</span>
+                    </div>
+                    <div class="apt-body">
+                        <h3>Appartement Familial</h3>
+                        <ul class="apt-features">
+                            <li><i data-lucide="users"></i> 4 à 6 personnes</li>
+                            <li><i data-lucide="ruler"></i> 75 m²</li>
+                            <li><i data-lucide="wifi"></i> Wi-Fi</li>
+                            <li><i data-lucide="utensils"></i> Cuisine équipée</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline btn-block">Réserver</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="section-footer reveal">
+                <a href="#contact" class="link-arrow link-gold">
+                    Voir tous les appartements <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ INFOS PRATIQUES ============================ -->
+    <section class="info-strip" id="offres">
+        <div class="container info-grid">
+            <div class="info-item reveal">
+                <i data-lucide="calendar-check"></i>
+                <span>Ouvert 7j/7</span>
+            </div>
+            <div class="info-item reveal">
+                <i data-lucide="coffee"></i>
+                <span>Petit-déjeuner</span>
+            </div>
+            <div class="info-item reveal">
+                <i data-lucide="wifi"></i>
+                <span>Wi-Fi haut débit</span>
+            </div>
+            <div class="info-item reveal">
+                <i data-lucide="car"></i>
+                <span>Parking privé</span>
+            </div>
+            <div class="info-item reveal">
+                <i data-lucide="snowflake"></i>
+                <span>Climatisation</span>
+            </div>
+            <div class="info-item reveal">
+                <i data-lucide="map-pin"></i>
+                <span>Emplacement idéal</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ GALERIE ============================ -->
+    <section class="section section-cream" id="apropos">
+        <div class="container">
+            <div class="section-header center reveal">
+                <span class="eyebrow">Galerie</span>
+                <h2 class="section-title">Un lieu où chaque détail compte.</h2>
+                <p class="section-sub">
+                    De la table dressée à la chambre apaisante, plongez dans
+                    l'atmosphère du Paradisier.
+                </p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item gallery-item-1 reveal" aria-label="Salle du restaurant"></div>
+                <div class="gallery-item gallery-item-2 reveal" aria-label="Plat signature"></div>
+                <div class="gallery-item gallery-item-3 reveal" aria-label="Terrasse extérieure"></div>
+                <div class="gallery-item gallery-item-4 reveal" aria-label="Chambre d'appartement"></div>
+            </div>
+
+            <div class="section-footer reveal">
+                <a href="#contact" class="btn btn-outline">Découvrir la galerie</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ AVIS ============================ -->
+    <section class="section" id="avis">
+        <div class="container">
+            <div class="section-header center reveal">
+                <span class="eyebrow">Témoignages</span>
+                <h2 class="section-title">Ils ont aimé leur séjour</h2>
+            </div>
+
+            <div class="reviews-grid">
+                <article class="review-card reveal">
+                    <div class="stars" aria-label="5 étoiles sur 5">
+                        <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+                    </div>
+                    <blockquote>
+                        "Cuisine excellente, service attentionné et cadre magnifique.
+                        Nous reviendrons sans hésiter !"
+                    </blockquote>
+                    <footer>
+                        <strong>Sophie L.</strong>
+                        <span>Cliente restaurant</span>
+                    </footer>
+                </article>
+
+                <article class="review-card reveal">
+                    <div class="stars" aria-label="5 étoiles sur 5">
+                        <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+                    </div>
+                    <blockquote>
+                        "Appartement impeccable, très bien équipé et idéalement situé.
+                        Parfait pour un séjour professionnel."
+                    </blockquote>
+                    <footer>
+                        <strong>Marc D.</strong>
+                        <span>Voyage d'affaires</span>
+                    </footer>
+                </article>
+
+                <article class="review-card reveal">
+                    <div class="stars" aria-label="5 étoiles sur 5">
+                        <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+                    </div>
+                    <blockquote>
+                        "Le combo restaurant + appart est juste parfait. Tout était
+                        réuni pour un week-end réussi."
+                    </blockquote>
+                    <footer>
+                        <strong>Anaïs &amp; Julien</strong>
+                        <span>Week-end en couple</span>
+                    </footer>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ CONTACT ============================ -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-header center reveal">
+                <span class="eyebrow">Contact &amp; Réservation</span>
+                <h2 class="section-title">Réservez votre expérience</h2>
+                <p class="section-sub">
+                    Réservez votre table ou planifiez votre séjour, nous sommes à votre service.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i data-lucide="phone"></i></div>
+                        <div>
+                            <span class="contact-label">Téléphone</span>
+                            <a href="tel:+261340000000" class="contact-value">+261 34 00 000 00</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i data-lucide="message-circle"></i></div>
+                        <div>
+                            <span class="contact-label">WhatsApp</span>
+                            <a href="https://wa.me/261340000000" target="_blank" rel="noopener" class="contact-value">+261 34 00 000 00</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i data-lucide="map-pin"></i></div>
+                        <div>
+                            <span class="contact-label">Adresse</span>
+                            <span class="contact-value">Ambohipo Pylône, Antananarivo</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i data-lucide="utensils-crossed"></i></div>
+                        <div>
+                            <span class="contact-label">Horaires restaurant</span>
+                            <span class="contact-value">12h00 – 14h30 &nbsp;/&nbsp; 19h00 – 22h30</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i data-lucide="bell-ring"></i></div>
+                        <div>
+                            <span class="contact-label">Réception</span>
+                            <span class="contact-value">7h00 – 23h00</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-actions">
+                        <a href="https://wa.me/261340000000" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+                            <i data-lucide="message-circle"></i> WhatsApp
+                        </a>
+                        <a href="tel:+261340000000" class="btn btn-outline btn-lg">
+                            <i data-lucide="phone"></i> Appeler
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-map reveal">
+                    <iframe
+                        title="Le Paradisier — Antananarivo"
+                        src="https://www.google.com/maps?q=Ambohipo,Antananarivo&output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ FOOTER ============================ -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <span class="brand-name footer-logo">LE PARADISIER</span>
+                <span class="brand-sub">Restaurant &amp; Appartements</span>
+                <p class="footer-desc">
+                    Une cuisine raffinée et des appartements meublés haut de gamme,
+                    pour vivre la ville autrement.
+                </p>
+                <a href="https://wa.me/261340000000" target="_blank" rel="noopener" class="btn btn-primary btn-wa">
+                    <i data-lucide="message-circle"></i> WhatsApp
+                </a>
+            </div>
+
+            <div class="footer-col">
+                <h5>Navigation</h5>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#restaurant">Restaurant</a></li>
+                    <li><a href="#appartements">Appartements</a></li>
+                    <li><a href="#offres">Offres &amp; Séjours</a></li>
+                    <li><a href="#avis">Avis</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Informations</h5>
+                <ul>
+                    <li><i data-lucide="map-pin"></i> Ambohipo Pylône, Antananarivo</li>
+                    <li><i data-lucide="phone"></i> <a href="tel:+261340000000">+261 34 00 000 00</a></li>
+                    <li><i data-lucide="clock"></i> Restaurant : 12h–14h30 / 19h–22h30</li>
+                    <li><i data-lucide="bell-ring"></i> Réception : 7h–23h</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Suivez-nous</h5>
+                <div class="socials">
+                    <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                    <a href="#" aria-label="TripAdvisor"><i data-lucide="map"></i></a>
+                    <a href="#" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <span>© 2026 Le Paradisier — Tous droits réservés.</span>
+                <span>Site vitrine premium</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bouton WhatsApp flottant -->
+    <a href="https://wa.me/261340000000" target="_blank" rel="noopener" class="float-wa" aria-label="Discuter sur WhatsApp">
+        <i data-lucide="message-circle"></i>
+    </a>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
